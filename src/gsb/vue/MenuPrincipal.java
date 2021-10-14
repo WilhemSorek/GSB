@@ -74,7 +74,7 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 
 		mVisites = new JMenu("Visites");
 		JMenuItem mA1 = new JMenuItem("Consultation Visite");
-		mE1.addActionListener(this); // installation d'un écouteur d'action
+		mA1.addActionListener(this); // installation d'un écouteur d'action
 		mVisites.add(mA1);
 		JMenuItem mA2 = new JMenuItem("Ajout Visite");
 		mA2.addActionListener(this);
