@@ -2,8 +2,8 @@ package gsb.modele;
 
 public class Stocker {
 	protected int qteStock;
-	public Visiteur unVisiteur;
-	public Medicament unMedicament;
+	protected Visiteur unVisiteur;
+	protected Medicament unMedicament;
 	
 	public Stocker(int qteStock, Visiteur unVisiteur, Medicament unMedicament) {
 		this.qteStock = qteStock;
