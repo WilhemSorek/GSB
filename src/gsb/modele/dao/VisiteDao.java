@@ -3,8 +3,6 @@ package gsb.modele.dao;
 import java.sql.ResultSet;
 
 import gsb.modele.Visite;
-import gsb.modele.Visiteur;
-import gsb.modele.Medecin;
 
 
 public class VisiteDao {
@@ -28,6 +26,7 @@ public class VisiteDao {
 		ConnexionMySql.fermerConnexionBd();
 		return uneVisite;
 	}
+	
 	public static int ajouter(Visite uneVisite){
 		int verificationAjout = 0;
 		
