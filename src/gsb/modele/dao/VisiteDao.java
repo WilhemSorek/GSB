@@ -29,6 +29,19 @@ public class VisiteDao {
 		return uneVisite;
 	}
 	public static int ajouter(Visite uneVisite){
+		int verificationAjout = 0;
+		
+		try {
+		String reqInsertion = "insert into VISITE values ('"+uneVisite.getReference()+"','"+uneVisite.getDate()+"','"+uneVisite.getCommentaire()+"','"+uneVisite.getUnMedecin()+"','"+uneVisite.getUnVisiteur()+"')";
+		verificationAjout = ConnexionMySql.execReqMaj(reqInsertion);
+	
+			
+		}
+		catch(Exception e) {
+			System.out.println("erreur reqInsertion");
+			e.printStackTrace();
+		}
+		return verificationAjout;
 	}
 }
 
