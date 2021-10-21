@@ -82,6 +82,8 @@ public class JIFMedicament extends JInternalFrame {
         p.add(pBoutons);
         Container contentPane = getContentPane();
         contentPane.add(p);
+    }
+    
         
         public void remplirText(Medicament unMedicament) 	
         {  
@@ -90,7 +92,7 @@ public class JIFMedicament extends JInternalFrame {
             JTcomposition.setText(unMedicament.getComposition());
             JTeffets.setText(unMedicament.getEffets());    
             JTcontreIndication.setText(unMedicament.getContreIndication());
-            JTprixEchantillon.setText(unMedicament.getPrixEchantillon());
+            JTprixEchantillon.set(unMedicament.getPrixEchantillon());
             JTcodeFamille.setText(unMedicament.getCodeFamille());
             JTlibelleFamille.setText(unMedicament.getLibelleFamille());
            

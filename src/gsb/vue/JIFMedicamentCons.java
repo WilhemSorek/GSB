@@ -33,7 +33,7 @@ public abstract class JIFMedicamentCons extends JIFMedicament  implements Action
 		    	remplirText(leMedecin);
 		    	}
 	      addInternalFrameListener(new InternalFrameAdapter(){
-	            public void  internalFrameClosing(InternalFrameEvent e) {
+	      public void  internalFrameClosing(InternalFrameEvent e) {
 	            
 	            }
 	
