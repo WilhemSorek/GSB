@@ -1,4 +1,4 @@
-package gsb.modele.dao;
+ package gsb.modele.dao;
 
 import java.sql.ResultSet;
 
@@ -18,7 +18,7 @@ public class MedicamentDao {
 			}
 		}
 		catch(Exception e) {
-			System.out.println("erreur reqSelect.next() pour la requête - select * from MEDICAMENT where MED_DEPOTLEGAL ='"+codeMedicament+"'");
+			System.out.println("erreur reqSelect.next() pour la requï¿½te - select * from MEDICAMENT where MED_DEPOTLEGAL ='"+codeMedicament+"'");
 			e.printStackTrace();
 		}
 		ConnexionMySql.fermerConnexionBd();
