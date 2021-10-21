@@ -30,8 +30,8 @@ public class JIFMedecinCons extends JIFMedecin  implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JButton premier;
-    private JButton suivant;
-    private JButton precedent; 
+    private JButton precedent;
+    private JButton suivant; 
     private JButton dernier; 
     private ArrayList<Medecin> lesMedecins;
 	private int indiceEnCours;
@@ -40,10 +40,10 @@ public class JIFMedecinCons extends JIFMedecin  implements ActionListener {
         super();
         premier = new JButton("Premier");
         pBoutons.add(premier);
-        suivant = new JButton("Suivant");
-        pBoutons.add(suivant);
-        precedent = new JButton("Precedent");
+        suivant = new JButton("Precedent");
         pBoutons.add(precedent);
+        precedent = new JButton("Suivant");
+        pBoutons.add(suivant);
         dernier = new JButton("Dernier");
         pBoutons.add(dernier);
         // déclaration des sources d'évènements
