@@ -6,13 +6,13 @@ public class Medicament {
 	protected String composition;
 	protected String effets;
 	protected String contreIndication;
-	protected float prixEchantillon;
+	protected double prixEchantillon;
 	protected String codeFamille;
 	protected String libelleFamille;
 	
 	
 	public Medicament(String depotLegal, String nomCommercial, String composition, String effets,
-			String contreIndication, float prixEchantillon, String codeFamille, String libelleFamille) {
+			String contreIndication, double prixEchantillon, String codeFamille, String libelleFamille) {
 		this.depotLegal = depotLegal;
 		this.nomCommercial = nomCommercial;
 		this.composition = composition;
@@ -52,10 +52,10 @@ public class Medicament {
 	public void setContreIndication(String contreIndication) {
 		this.contreIndication = contreIndication;
 	}
-	public float getPrixEchantillon() {
+	public double getPrixEchantillon() {
 		return prixEchantillon;
 	}
-	public void setPrixEchantillon(float prixEchantillon) {
+	public void setPrixEchantillon(double prixEchantillon) {
 		this.prixEchantillon = prixEchantillon;
 	}
 	public String getCodeFamille() {
