@@ -6,6 +6,8 @@
  */
 package gsb.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import gsb.modele.Medecin;
 import gsb.modele.dao.MedecinDao;
 
@@ -31,4 +33,17 @@ public class MedecinService {
 		return unMedecin;
 	}
 	
+	public static ArrayList<Medecin> retournerCollectionDesMedecins()
+	{
+		ArrayList<Medecin> colMedecin = new ArrayList<Medecin>();
+		colMedecin = MedecinDao.retournerCollectionDesMedecins();
+		return colMedecin;
+	}
+	
+	public static HashMap<String,Medecin> retournerDictionnaireDesMedecins()
+	{
+		HashMap<String,Medecin> dicMedecin = new HashMap<String,Medecin>();
+		dicMedecin = MedecinDao.retournerDictionnaireDesMedecins();
+		return dicMedecin;
+	}
 }
