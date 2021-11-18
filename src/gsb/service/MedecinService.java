@@ -23,7 +23,7 @@ public class MedecinService {
 		Medecin unMedecin = null;
 		try{
 		if (unCodeMedecin==null) {
-            throw new Exception("Donnée obligatoire : code");
+            throw new Exception("Code Medecin non renseigné");
         }
 		unMedecin = MedecinDao.rechercher(unCodeMedecin);
 		}

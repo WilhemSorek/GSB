@@ -11,7 +11,7 @@ public class MedicamentService
 		try{
 			if (codeMedicament == null)
 			{
-				throw new Exception("Donnée obligatoire : code Medicament");
+				throw new Exception("Code Medicament non renseigné");
 			}
 			unMedicament = MedicamentDao.rechercher(codeMedicament);
 		}
@@ -27,7 +27,7 @@ public class MedicamentService
 		try {
 			if (unMedicament == null)
 			{
-				throw new Exception("Donnée obligatoire : Medicament");
+				throw new Exception("Medicament à ajouter non renseigné");
 			}
 			resultat = MedicamentDao.ajouter(unMedicament);
 		}

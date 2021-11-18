@@ -11,7 +11,7 @@ public class LocaliteService
 		try {
 			if (codePostal == null)
 			{
-				throw new Exception("Données obligatoires : code postal");
+				throw new Exception("Code postal non renseigné");
 			}
 			uneLocalite = LocaliteDao.rechercher(codePostal);
 		}

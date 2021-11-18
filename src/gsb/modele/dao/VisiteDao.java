@@ -8,6 +8,7 @@ import gsb.modele.Visiteur;
 
 
 public class VisiteDao {
+	
 	public static Visite rechercher(String reference){
 		Visite uneVisite = null;
 		ResultSet reqSeleq = ConnexionMySql.execReqSelection("select * from VISITE where REFERENCE = '"+reference+"'");

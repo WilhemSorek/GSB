@@ -30,7 +30,7 @@ public class OffrirDao {
 	public static ArrayList<Medicament> retournerListeMedicament(String unCodeVisite)
 	{
 		ArrayList<Medicament> collectionMedicament = new ArrayList<Medicament>();
-		ResultSet reqSelection = ConnexionMySql.execReqSelection("select * from MED_DEPOTLEGAL where REFERENCE = '"+unCodeVisite+"'");
+		ResultSet reqSelection = ConnexionMySql.execReqSelection("select * from OFFRIR where REFERENCE = '"+unCodeVisite+"'");
 		try {
 			while (reqSelection.next())
 			{
