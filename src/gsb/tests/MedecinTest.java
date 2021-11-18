@@ -19,7 +19,8 @@ public class MedecinTest {
 			System.out.println("Nom ="+unMedecin.getNom());
 			System.out.println("Prenom ="+unMedecin.getPrenom());
 			System.out.println("Adresse ="+unMedecin.getAdresse());
-			System.out.println("Localite ="+unMedecin.getLaLocalite());
+			System.out.println("ville ="+unMedecin.getLaLocalite().getVille());
+			System.out.println("code postal ="+unMedecin.getLaLocalite().getCodePostal());
 			System.out.println("Telephone ="+unMedecin.getTelephone());
 			System.out.println("Potentiel ="+unMedecin.getPotentiel());
 			System.out.println("Specialite ="+unMedecin.getSpecialite());
