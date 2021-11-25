@@ -28,7 +28,7 @@ public class MedicamentDao {
 		int verifAjout = 0;
 		
 		try {
-		String reqInsert = "insert into MEDICAMENT values ('"+unMedicament.getDepotLegal()+"','"+unMedicament.getNomCommercial()+"','"+unMedicament.getComposition()+"','"+unMedicament.getEffets()+"','"+unMedicament.getContreIndication()+"','"+unMedicament.getPrixEchantillon()+"','"+unMedicament.getCodeFamille()+"','"+unMedicament.getLibelleFamille()+"')";
+		String reqInsert = "insert into MEDICAMENT values ('"+unMedicament.getDepotLegal()+"','"+unMedicament.getNomCommercial()+"','"+unMedicament.getComposition()+"','"+unMedicament.getEffets()+"','"+unMedicament.getContreIndication()+"',"+unMedicament.getPrixEchantillon()+",'"+unMedicament.getCodeFamille()+"','"+unMedicament.getLibelleFamille()+"')";
 		verifAjout = ConnexionMySql.execReqMaj(reqInsert);
 	
 			
