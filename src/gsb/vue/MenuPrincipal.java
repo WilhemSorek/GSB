@@ -36,12 +36,9 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 	protected JMenuBar mbar;
 	protected JMenu mMedecins;
 	protected JMenu mMedicaments;
+	protected JMenu mVisites;
 
-	JMenu mVisites;
-
-	/**
-	 * 
-	 */
+	
 	public MenuPrincipal() {
 
 		myJInternalFrame = new JInternalFrame(); // pour affichage d'une seule
@@ -100,8 +97,27 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 
 			} else if (ChoixOption.equals("Liste Medecins")) {
 				ouvrirFenetre(new JIFMedecinListeDic(this));
+			} 
+			
+			else if (ChoixOption.equals("Consultation Medicament"))
+			{
+				//Guewen
 			}
-
+			
+			else if (ChoixOption.equals("Ajout Medicament"))
+			{
+				//Guewen
+			}
+			
+			else if (ChoixOption.equals("Consultation Visite"))
+			{
+				
+			}
+			
+			else if (ChoixOption.equals("Ajout Visite")) 
+			{
+				
+			}
 		}
 
 	}

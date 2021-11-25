@@ -3,7 +3,6 @@ package gsb.service;
 import java.util.ArrayList;
 import gsb.modele.Visite;
 import gsb.modele.Medicament;
-import gsb.modele.Offrir;
 import gsb.modele.dao.OffrirDao;
 
 public class OffrirService 

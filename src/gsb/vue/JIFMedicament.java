@@ -110,4 +110,3 @@ public class JIFMedicament extends JInternalFrame {
             JTlibelleFamille.setText("");
          }
     }
-}

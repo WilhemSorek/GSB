@@ -17,7 +17,7 @@ public abstract class JIFMedicamentCons extends JIFMedicament  implements Action
  private JButton fermer;
  private ArrayList<Medicament> lesMedicament;
 	
-	public class JIFMedicamentCons {
+	public class JIFMedicamentCons extends JInternalFrame implements ActionListener {
 		  super();
 		  fermer = new JButton("Fermer");
 	      pBoutons.add(fermer);

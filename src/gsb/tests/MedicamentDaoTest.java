@@ -18,7 +18,7 @@ public class MedicamentDaoTest {
 		System.out.println(unMedicament.getCodeFamille());
 		System.out.println(unMedicament.getLibelleFamille());
 	
-	    Medicament unMedicament1= new Medicament("TOPL01", "Toplexil","citrate de sodium, arôme composé caramel" , "Reduit l'irritation de la gorge", "interdit pour les Femmes enceinte", 3.24 , "SIROP01", "SIROP");
+	    Medicament unMedicament1= new Medicament("TOPL01", "Toplexil","citrate de sodium, arôme composé caramel" , "Reduit l irritation de la gorge", "interdit pour les Femmes enceinte", 3.24 , "SIR", "SIROP");
 	    System.out.println(MedicamentDao.ajouter(unMedicament1));
 	    
 	}
