@@ -5,27 +5,40 @@ public class Offrir {
 	protected Visite uneVisite;
 	protected int qteOfferte;
 	
-	public Offrir(Medicament unMedicament, Visite uneVisite, int qteOfferte) {
+	public Offrir(Medicament unMedicament, Visite uneVisite, int qteOfferte) 
+	{
 		this.unMedicament = unMedicament;
 		this.uneVisite = uneVisite;
 		this.qteOfferte = qteOfferte;
 	}
-	public Medicament getUnMedicament() {
+	
+	public Medicament getUnMedicament() 
+	{
 		return unMedicament;
 	}
-	public void setUnMedicament(Medicament unMedicament) {
+	
+	public void setUnMedicament(Medicament unMedicament) 
+	{
 		this.unMedicament = unMedicament;
 	}
-	public Visite getUneVisite() {
+	
+	public Visite getUneVisite() 
+	{
 		return uneVisite;
 	}
-	public void setUneVisite(Visite uneVisite) {
+	
+	public void setUneVisite(Visite uneVisite) 
+	{
 		this.uneVisite = uneVisite;
 	}
-	public int getQteOfferte() {
+	
+	public int getQteOfferte() 
+	{
 		return qteOfferte;
 	}
-	public void setQteOfferte(int qteOfferte) {
+	
+	public void setQteOfferte(int qteOfferte) 
+	{
 		this.qteOfferte = qteOfferte;
 	}
 }
