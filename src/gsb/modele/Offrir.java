@@ -41,4 +41,5 @@ public class Offrir {
 	{
 		this.qteOfferte = qteOfferte;
 	}
+	
 }
