@@ -16,8 +16,8 @@ public class VisiteDao {
 		try {
 			if(reqSeleq.next())
 			{
-				Medecin unMedecin = MedecinDao.rechercher(reqSeleq.getString(4));
-				Visiteur unVisiteur = VisiteurDao.rechercher(reqSeleq.getString(5));
+				Medecin unMedecin = MedecinDao.rechercher(reqSeleq.getString(5));
+				Visiteur unVisiteur = VisiteurDao.rechercher(reqSeleq.getString(4));
 				uneVisite = new Visite(reqSeleq.getString(1), reqSeleq.getString(2), reqSeleq.getString(3), unMedecin, unVisiteur);
 						
 			}
