@@ -34,7 +34,7 @@ public class VisiteDao {
 		int verificationAjout = 0;
 		
 		try {
-		String reqInsertion = "insert into VISITE values ('"+uneVisite.getReference()+"','"+uneVisite.getDate()+"','"+uneVisite.getCommentaire()+"','"+uneVisite.getUnMedecin()+"','"+uneVisite.getUnVisiteur()+"')";
+		String reqInsertion = "insert into VISITE values ('"+uneVisite.getReference()+"','"+uneVisite.getDate()+"','"+uneVisite.getCommentaire()+"','"+uneVisite.getUnVisiteur().getMatricule()+"','"+uneVisite.getUnMedecin().getCodeMed()+"')";
 		verificationAjout = ConnexionMySql.execReqMaj(reqInsertion);
 	
 			
