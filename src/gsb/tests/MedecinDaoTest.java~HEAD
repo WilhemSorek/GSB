@@ -1,0 +1,21 @@
+package gsb.tests;
+
+import gsb.modele.Medecin;
+import gsb.modele.dao.MedecinDao;
+
+public class MedecinDaoTest {
+public static void main(String[] args) {
+		
+		Medecin unMedecin = MedecinDao.rechercher("m001");
+		System.out.println(unMedecin.getCodeMed());
+		System.out.println(unMedecin.getNom());
+		System.out.println(unMedecin.getPrenom());
+		System.out.println(unMedecin.getAdresse());
+		System.out.println(unMedecin.getLaLocalite().getCodePostal());
+		System.out.println(unMedecin.getTelephone());
+		System.out.println(unMedecin.getPotentiel());
+		System.out.println(unMedecin.getSpecialite());
+		
+   }
+
+}
