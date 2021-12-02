@@ -1,6 +1,7 @@
 package gsb.modele.dao;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import gsb.modele.Medecin;
 import gsb.modele.Visite;
@@ -62,6 +63,23 @@ public class VisiteDao {
 			e.printStackTrace();
 		}
 		return verifModif;
+	}
+	
+	public static ArrayList<Visite> retournerCollectionDesVisites()
+	{
+		ArrayList<Visite> colVisites = new ArrayList<Visite>();
+		ResultSet reqSelection = ConnexionMySql.execReqSelection("select * from VISITE");
+		try {
+			while (reqSelection.next()) {
+				String refVisite = reqSelection.getString(1);
+				colVisites.add(VisiteDao.rechercher(refVisite));
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("erreur retourner colVisiteur");
+		}
+		return colVisites;
 	}
 }
 

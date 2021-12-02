@@ -1,5 +1,7 @@
 package gsb.service;
 
+import java.util.ArrayList;
+
 import gsb.modele.Visite;
 import gsb.modele.dao.VisiteDao;
 
@@ -53,4 +55,10 @@ public class VisiteService
 		return resultat;
 	}
 	
+	public static ArrayList<Visite> retournerCollectionVisiteur()
+	{
+		ArrayList<Visite> colVisite = new ArrayList<Visite>();
+		colVisite = VisiteDao.retournerCollectionDesVisites();
+		return colVisite;
+	}
 }
