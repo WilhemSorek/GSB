@@ -18,7 +18,7 @@ import java.util.HashMap;
  * TODO Pour changer le modèle de ce commentaire de type généré, allez à :
  * Fenêtre - Préférences - Java - Style de code - Modèles de code
  */
-public class MedecinDaoTestRetournerDictionnaire {
+public class MedecinDaoTest {
 
 	/**
 	 * @param args
