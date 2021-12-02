@@ -69,11 +69,11 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		mE2.addActionListener(this);
 		mMedicaments.add(mE2);
 
-		mVisites = new JMenu("Visites");
-		JMenuItem mA1 = new JMenuItem("Consultation Visite");
+		mVisites = new JMenu("Visiteur");
+		JMenuItem mA1 = new JMenuItem("Consultation Visiteur");
 		mA1.addActionListener(this); // installation d'un écouteur d'action
 		mVisites.add(mA1);
-		JMenuItem mA2 = new JMenuItem("Ajout Visite");
+		JMenuItem mA2 = new JMenuItem("Ajout Visiteur");
 		mA2.addActionListener(this);
 		mVisites.add(mA2);
 
@@ -109,12 +109,12 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 				//Guewen
 			}
 			
-			else if (ChoixOption.equals("Consultation Visite"))
+			else if (ChoixOption.equals("Consultation Visiteur"))
 			{
-				
+				ouvrirFenetre(new JIFVisiteurCons());
 			}
 			
-			else if (ChoixOption.equals("Ajout Visite")) 
+			else if (ChoixOption.equals("Ajout Visiteur")) 
 			{
 				
 			}
