@@ -25,12 +25,25 @@ public class MedecinDaoTest {
 	 */
 	public static void main(String[] args) {
 		
+		Medecin unMedecin = MedecinDao.rechercher("m001");
+		System.out.println(unMedecin.getCodeMed());
+		System.out.println(unMedecin.getNom());
+		System.out.println(unMedecin.getPrenom());
+		System.out.println(unMedecin.getAdresse());
+		System.out.println(unMedecin.getLaLocalite().getCodePostal());
+		System.out.println(unMedecin.getTelephone());
+		System.out.println(unMedecin.getPotentiel());
+		System.out.println(unMedecin.getSpecialite());
+		
+		
 		HashMap<String,Medecin> unDicco = new HashMap<String,Medecin>();
 		unDicco =	MedecinDao.retournerDictionnaireDesMedecins();
 		if (unDicco.containsKey("m002")){
 			System.out.println(unDicco.get("m002").getNom());
-		}
 
+		
+		
+   }
 	}
 
 }
