@@ -35,15 +35,21 @@ public class MedecinDaoTest {
 		System.out.println(unMedecin.getPotentiel());
 		System.out.println(unMedecin.getSpecialite());
 		
-		
+		System.out.println("______________________________________");
 		HashMap<String,Medecin> unDicco = new HashMap<String,Medecin>();
 		unDicco =	MedecinDao.retournerDictionnaireDesMedecins();
 		if (unDicco.containsKey("m002")){
 			System.out.println(unDicco.get("m002").getNom());
-
+		}
+		System.out.println("______________________________________");
+		ArrayList<Medecin> uneCollec = new ArrayList<Medecin>();
+		uneCollec = MedecinDao.retournerCollectionDesMedecins();
+		for (Medecin leMedecin: uneCollec) {
+			System.out.println(leMedecin.getNom());
+		}
 		
 		
-   }
+   
 	}
 
 }
