@@ -30,7 +30,7 @@ public class VisiteurDao {
 	{
 		int verifAjout = 0;
 		try {
-			String reqInsert = "insert into VISITEUR values ('"+unVisiteur.getMatricule()+"','"+unVisiteur.getNom()+"','"+unVisiteur.getPrenom()+"','"+unVisiteur.getLogin()+"','"+unVisiteur.getMdp()+"','"+unVisiteur.getAdresse()+"','"+unVisiteur.getUneLocalite().getCodePostal()+"','"+unVisiteur.getDateEntree()+"','"+unVisiteur.getCodeUnite()+"','"+unVisiteur.getNomUnite()+"','"+unVisiteur.getPrime()+"'";
+			String reqInsert = "insert into VISITEUR values ('"+unVisiteur.getMatricule()+"','"+unVisiteur.getNom()+"','"+unVisiteur.getPrenom()+"','"+unVisiteur.getLogin()+"','"+unVisiteur.getMdp()+"','"+unVisiteur.getAdresse()+"','"+unVisiteur.getUneLocalite().getCodePostal()+"','"+unVisiteur.getDateEntree()+"','"+unVisiteur.getCodeUnite()+"','"+unVisiteur.getNomUnite()+"','"+unVisiteur.getPrime()+"')";
 			verifAjout = ConnexionMySql.execReqMaj(reqInsert);
 		}
 		catch (Exception e) {

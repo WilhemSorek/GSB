@@ -126,11 +126,18 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 		public void actionPerformed(ActionEvent arg0)
 		{
 			Object source = arg0.getSource();
+			try {
+				
+			
 			if (source == JBajouterVisiteur)
 			{
 				Visiteur unVisiteur = new Visiteur(JTmatricule.getText(), JTnom.getText(), JTprenom.getText(), JTlogin.getText(), JTmdp.getPassword().toString(), JTadresse.getText(), LocaliteDao.rechercher(JTcodePostal.getText()), JTdateEntree.getText(), Integer.valueOf(JTprime.getText()), JTcodeUnite.getText(), JTnomUnite.getText());
 				VisiteurService.ajouterVisiteur(unVisiteur);
 				this.viderText();
+			}
+			}
+			catch (Exception e) {
+				System.out.println(e.getMessage());
 			}
 		}
 		
@@ -142,6 +149,7 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 				JTlogin.setText("");
 				JTmdp.setText("");
 				JTadresse.setText("");
+				JTcodePostal.setText("");
 				JTdateEntree.setText("");
 				JTprime.setText("");
 				JTcodeUnite.setText("");
