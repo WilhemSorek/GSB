@@ -9,11 +9,12 @@ public class Visiteur {
 	protected String adresse;
 	protected Localite uneLocalite;
 	protected String dateEntree;
+	protected int prime;
 	protected String codeUnite;
 	protected String nomUnite;
 	
 	public Visiteur(String matricule, String nom, String prenom, String login, String mdp, String adresse,
-			Localite uneLocalite, String dateEntree, String codeUnite, String nomUnite) {
+			Localite uneLocalite, String dateEntree, int prime, String codeUnite, String nomUnite) {
 		this.matricule = matricule;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -22,6 +23,7 @@ public class Visiteur {
 		this.adresse = adresse;
 		this.uneLocalite = uneLocalite;
 		this.dateEntree = dateEntree;
+		this.prime = prime;
 		this.codeUnite = codeUnite;
 		this.nomUnite = nomUnite;
 	}
@@ -104,6 +106,14 @@ public class Visiteur {
 
 	public void setNomUnite(String nomUnite) {
 		this.nomUnite = nomUnite;
+	}
+	
+	public int getPrime() {
+		return prime;
+	}
+
+	public void setPrime(int prime) {
+		this.prime = prime;
 	}
 	
 }

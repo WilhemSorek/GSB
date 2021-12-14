@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class JIFVisiteur extends JInternalFrame {
@@ -30,7 +31,6 @@ public class JIFVisiteur extends JInternalFrame {
 	protected JTextField JTprenom;
 	protected JTextField JTadresse;
 	protected JTextField JTdateEntree;
-	protected JTextField JTprime;
 	protected JTextField JTcodeUnite;
 	protected JTextField JTnomUnite;
 	
@@ -38,7 +38,8 @@ public class JIFVisiteur extends JInternalFrame {
 	{
 		p = new JPanel();
 		pBoutons = new JPanel();
-		pTexte = new JPanel(new GridLayout(9,2));
+		pTexte = new JPanel(new GridLayout(7,2));
+		
 		
 		JLmatricule = new JLabel("Matricule");
 		JLnom = new JLabel("Nom");
@@ -53,18 +54,27 @@ public class JIFVisiteur extends JInternalFrame {
 		JTnom = new JTextField();
 		JTprenom = new JTextField();
 		JTadresse = new JTextField();
+		JTdateEntree = new JTextField();
 		JTcodeUnite = new JTextField();
 		JTnomUnite = new JTextField();
 		
 		pTexte.add(JLmatricule);
+		pTexte.add(JTmatricule);
 		pTexte.add(JLnom);
+		pTexte.add(JTnom);
 		pTexte.add(JLprenom);
+		pTexte.add(JTprenom);
 		pTexte.add(JLadresse);
+		pTexte.add(JTadresse);
+		pTexte.add(JLdateEntree);
+		pTexte.add(JTdateEntree);
 		pTexte.add(JLcodeUnite);
+		pTexte.add(JTcodeUnite);
 		pTexte.add(JLnomUnite);
-		
+		pTexte.add(JTnomUnite);
 		p.add(pTexte);
 		p.add(pBoutons);
+		
 		Container contentPane = getContentPane();
 		contentPane.add(p);
 		

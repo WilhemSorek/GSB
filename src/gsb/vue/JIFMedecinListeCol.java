@@ -74,7 +74,7 @@ public class JIFMedecinListeCol extends JInternalFrame implements ActionListener
 		p.add(scrollPane);
 		
 		pSaisie = new JPanel();
-		JTcodeMedecin = new JTextField(20);
+		JTcodeMedecin= new JTextField(20);
 		JTcodeMedecin.setMaximumSize(JTcodeMedecin.getPreferredSize());
 		JBafficherFiche = new JButton("Afficher Fiche médecin");
 		JBafficherFiche.addActionListener(this);

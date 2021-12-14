@@ -2,6 +2,7 @@ package gsb.modele.dao;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import gsb.modele.Medecin;
 import gsb.modele.Visite;
@@ -65,21 +66,20 @@ public class VisiteDao {
 		return verifModif;
 	}
 	
-	public static ArrayList<Visite> retournerCollectionDesVisites()
+	public static HashMap<String, Visite> retournerCollectionVisites()
 	{
-		ArrayList<Visite> colVisites = new ArrayList<Visite>();
+		HashMap<String, Visite> dicVisite = new HashMap<String, Visite>();
 		ResultSet reqSelection = ConnexionMySql.execReqSelection("select * from VISITE");
 		try {
 			while (reqSelection.next()) {
-				String refVisite = reqSelection.getString(1);
-				colVisites.add(VisiteDao.rechercher(refVisite));
+				dicVisite.put(reqSelection.getString(1), VisiteDao.rechercher(reqSelection.getString(1)));
 			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("erreur retourner colVisiteur");
+			System.out.println("erreur retourner dicVisite");
 		}
-		return colVisites;
+		return dicVisite;
 	}
 }
 
