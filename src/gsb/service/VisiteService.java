@@ -1,5 +1,8 @@
 package gsb.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import gsb.modele.Visite;
 import gsb.modele.dao.VisiteDao;
 
@@ -53,4 +56,10 @@ public class VisiteService
 		return resultat;
 	}
 	
+	public static HashMap<String, Visite> retournerCollectionVisites()
+	{
+		HashMap<String, Visite> colVisite = new HashMap<String, Visite>();
+		colVisite = VisiteDao.retournerCollectionVisites();
+		return colVisite;
+	}
 }
