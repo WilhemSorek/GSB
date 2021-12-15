@@ -1,6 +1,7 @@
  package gsb.modele.dao;
 
 import java.sql.ResultSet;
+import java.util.HashMap;
 
 import gsb.modele.Medicament;
 
@@ -38,5 +39,21 @@ public class MedicamentDao {
 			e.printStackTrace();
 		}
 		return verifAjout;
+	}
+	
+	public static HashMap<String, Medicament> retournerMedicament()
+	{
+		HashMap<String, Medicament> dicMedicament = new HashMap<String, Medicament>();
+		ResultSet reqSelect = ConnexionMySql.execReqSelection("select * from MEDICAMENT");
+		try {
+			while(reqSelect.next())
+			{
+				dicMedicament.put(reqSelect.getString(1), MedicamentDao.rechercher(reqSelect.getString(1)));
+			}
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	return retournerMedicament();
 	}
 }
