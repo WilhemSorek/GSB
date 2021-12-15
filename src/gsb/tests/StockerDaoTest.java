@@ -11,15 +11,16 @@ public class StockerDaoTest {
 	public static void main(String[] arg) {
 	
 	ArrayList<Medicament> uneCollecMedicament = new ArrayList<Medicament>();
-	uneCollecMedicament = StockerDao.retournerListeStock("");
-	for (Medicament unMedicament: uneCollecMedicament) {
-		System.out.println();
+	uneCollecMedicament = StockerDao.retournerListeStock("e49");
+	for (Medicament unMedicament : uneCollecMedicament) {
+		System.out.println(unMedicament.getNomCommercial());
 	}
-	}
+	System.out.println("_______________________________________________");
+	
 	ArrayList<Visiteur> uneCollecVisiteur = new ArrayList<Visiteur>();
-	uneCollecVisiteur = StockerDao.retournerListeVisiteur("");
-	for (Visiteur unVisteur : uneCollecVisiteur) {
-		System.out.println();
+	uneCollecVisiteur = StockerDao.retournerListeVisiteur("APATOUX22");
+	for (Visiteur unVisiteur : uneCollecVisiteur) {
+		System.out.println(unVisiteur.getNom());
 	}
 }
 }

@@ -13,7 +13,7 @@ public class StockerTest {
 		// TODO Auto-generated method stub
 		Medicament unMedicament = new Medicament("DEP002","Viagra","cachet bleu","secondaire","a gober",1.01,"FAM001","Les gobeurs");
 		Localite uneLocaliteVis = new Localite("45000","Orleans");
-		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE","101","Battaillon");
+		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE",0,"101","Battaillon");
 	
 		
 		Stocker unStock = new Stocker(997,unVisiteur,unMedicament);

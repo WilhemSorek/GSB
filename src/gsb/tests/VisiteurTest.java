@@ -10,7 +10,7 @@ public class VisiteurTest {
 		Localite uneLocalite = new Localite("45000","Orleans");
 		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT",
 				"ANT-MAN","Avengers","Film Marvel",uneLocalite,"10 NOVEMBRE",
-				"101","Battaillon");
+				0, "101","Battaillon");
 		VisiteurTest.afficherVisiteur(unVisiteur);
 	}
 
@@ -25,6 +25,7 @@ public class VisiteurTest {
 		System.out.println("Ville = "+unVisiteur.getUneLocalite().getVille());
 		System.out.println("Code Postal = "+unVisiteur.getUneLocalite().getCodePostal());
 		System.out.println("Date d'entrée ="+unVisiteur.getDateEntree());
+		System.out.println("Prime ="+unVisiteur.getPrime());
 		System.out.println("code D'unite ="+unVisiteur.getCodeUnite());
 		System.out.println("nom unitaire ="+unVisiteur.getNomUnite());
 	}

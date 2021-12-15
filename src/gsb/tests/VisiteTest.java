@@ -13,7 +13,7 @@ public class VisiteTest {
 		Localite uneLocaliteMed = new Localite("45000","Orleans");
 		Medecin unMedecin = new Medecin("MEC001","RAOUL","Medecin","24 rue du bled",uneLocaliteMed,"0617222222","100%","pied");
 		Localite uneLocaliteVis = new Localite("45000","Orleans");
-		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE","101","Battaillon");
+		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE",0,"101","Battaillon");
 		Visite uneVisite = new Visite("REF45","3 Mars","Commenter avec un point",unMedecin,unVisiteur);
 		VisiteTest.afficherVisite(uneVisite);
 	}
