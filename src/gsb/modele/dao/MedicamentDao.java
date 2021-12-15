@@ -54,6 +54,7 @@ public class MedicamentDao {
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		ConnexionMySql.fermerConnexionBd();
 	return retournerMedicament();
 	}
 }
