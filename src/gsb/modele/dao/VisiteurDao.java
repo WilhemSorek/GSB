@@ -53,6 +53,7 @@ public class VisiteurDao {
 			e.printStackTrace();
 			System.out.println("erreur retourner dicVisiteur");
 		}
+		ConnexionMySql.fermerConnexionBd();
 		return dicVisiteur;
 	}
 }
