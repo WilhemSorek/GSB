@@ -21,6 +21,7 @@ public class JIFMedicamentAdd extends JInternalFrame implements ActionListener
 	
 	protected JPanel p;
 	protected JPanel pSaisie;
+	protected JPanel pBouton;
 	
 	protected JLabel JLdepotlegal;
 	protected JLabel JLnomCommercial;
@@ -58,6 +59,7 @@ public class JIFMedicamentAdd extends JInternalFrame implements ActionListener
          
         p = new JPanel();
  		pSaisie = new JPanel(new GridLayout(8,2));
+ 		pBouton = new JPanel(new GridLayout(1, 1));
  		
  		JTdepotlegal = new JTextField(20);
  		JTdepotlegal.setMaximumSize(JTdepotlegal.getPreferredSize());
@@ -94,8 +96,10 @@ public class JIFMedicamentAdd extends JInternalFrame implements ActionListener
 		pSaisie.add(JTcodeFamille);
 		pSaisie.add(JLlibelleFamille);
 		pSaisie.add(JTlibelleFamille);
-		pSaisie.add(JBajouterMedicament);
+		
+		pBouton.add(JBajouterMedicament);
 		p.add(pSaisie);
+		p.add(pBouton);
 		
 		Container contentPane = getContentPane();
 		contentPane.add(p);

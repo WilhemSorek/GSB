@@ -52,7 +52,8 @@ public class JIFMedicament extends JInternalFrame {
         JLcodeFamille = new JLabel("Code Famille");
         JLlibelleFamille = new JLabel("Libelle Famille");
         
-        JTdepotlegal = new JTextField();
+        JTdepotlegal = new JTextField(20);
+        JTdepotlegal.setMaximumSize(JTdepotlegal.getPreferredSize());
         JTnomCommercial = new JTextField();
         JTcomposition = new JTextField();
         JTeffets = new JTextField();    
@@ -92,7 +93,7 @@ public class JIFMedicament extends JInternalFrame {
             JTcomposition.setText(unMedicament.getComposition());
             JTeffets.setText(unMedicament.getEffets());    
             JTcontreIndication.setText(unMedicament.getContreIndication());
-            JTprixEchantillon.set(unMedicament.getPrixEchantillon());
+            JTprixEchantillon.setText(String.valueOf(unMedicament.getPrixEchantillon()));
             JTcodeFamille.setText(unMedicament.getCodeFamille());
             JTlibelleFamille.setText(unMedicament.getLibelleFamille());
            
