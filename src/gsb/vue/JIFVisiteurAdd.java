@@ -22,6 +22,7 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 	
 	protected JPanel p;
 	protected JPanel pSaisie;
+	protected JPanel pBouton;
 	
 	protected JLabel JLmatricule;
 	protected JLabel JLnom;
@@ -68,28 +69,30 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 		
 		p = new JPanel();
 		pSaisie = new JPanel(new GridLayout(13,2));
+		pBouton = new JPanel(new GridLayout(1, 1));
+		
 		JTmatricule = new JTextField(20);
 		JTmatricule.setMaximumSize(JTmatricule.getPreferredSize());
 		JTnom = new JTextField(20);
-		JTnom.setMaximumSize(JTmatricule.getPreferredSize());
+		JTnom.setMaximumSize(JTnom.getPreferredSize());
 		JTprenom = new JTextField(20);
-		JTprenom.setMaximumSize(JTmatricule.getPreferredSize());
+		JTprenom.setMaximumSize(JTprenom.getPreferredSize());
 		JTlogin = new JTextField(20);
-		JTlogin.setMaximumSize(JTmatricule.getPreferredSize());
+		JTlogin.setMaximumSize(JTlogin.getPreferredSize());
 		JTmdp = new JPasswordField(20);
-		JTmdp.setMaximumSize(JTmatricule.getPreferredSize());
+		JTmdp.setMaximumSize(JTmdp.getPreferredSize());
 		JTadresse = new JTextField(20);
-		JTadresse.setMaximumSize(JTmatricule.getPreferredSize());
+		JTadresse.setMaximumSize(JTadresse.getPreferredSize());
 		JTcodePostal = new JTextField(20);
 		JTcodePostal.setMaximumSize(JTcodePostal.getPreferredSize());
 		JTdateEntree = new JTextField(20);
-		JTdateEntree.setMaximumSize(JTmatricule.getPreferredSize());
+		JTdateEntree.setMaximumSize(JTdateEntree.getPreferredSize());
 		JTprime = new JTextField(20);
-		JTprime.setMaximumSize(JTmatricule.getPreferredSize());
+		JTprime.setMaximumSize(JTprime.getPreferredSize());
 		JTcodeUnite = new JTextField(20);
-		JTcodeUnite.setMaximumSize(JTmatricule.getPreferredSize());
+		JTcodeUnite.setMaximumSize(JTcodeUnite.getPreferredSize());
 		JTnomUnite = new JTextField(20);
-		JTnomUnite.setMaximumSize(JTmatricule.getPreferredSize());
+		JTnomUnite.setMaximumSize(JTnomUnite.getPreferredSize());
 		JBajouterVisiteur = new JButton("Ajouter Visiteur");
 		JBajouterVisiteur.addActionListener(this);
 		
@@ -114,9 +117,11 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 		pSaisie.add(JLcodeUnite);
 		pSaisie.add(JTcodeUnite);
 		pSaisie.add(JLnomUnite);
-		pSaisie.add(JTnomUnite); 
-		pSaisie.add(JBajouterVisiteur);
+		pSaisie.add(JTnomUnite);
+		
+		pBouton.add(JBajouterVisiteur);
 		p.add(pSaisie);
+		p.add(pBouton);
 		
 		Container contentPane = getContentPane();
 		contentPane.add(p);
@@ -126,18 +131,17 @@ public class JIFVisiteurAdd extends JInternalFrame implements ActionListener
 		public void actionPerformed(ActionEvent arg0)
 		{
 			Object source = arg0.getSource();
-			try {
-				
-			
 			if (source == JBajouterVisiteur)
 			{
+				try {
+			
 				Visiteur unVisiteur = new Visiteur(JTmatricule.getText(), JTnom.getText(), JTprenom.getText(), JTlogin.getText(), JTmdp.getPassword().toString(), JTadresse.getText(), LocaliteDao.rechercher(JTcodePostal.getText()), JTdateEntree.getText(), Integer.valueOf(JTprime.getText()), JTcodeUnite.getText(), JTnomUnite.getText());
 				VisiteurService.ajouterVisiteur(unVisiteur);
 				this.viderText();
 			}
-			}
 			catch (Exception e) {
 				System.out.println(e.getMessage());
+			}
 			}
 		}
 		
