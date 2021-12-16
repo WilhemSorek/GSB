@@ -127,7 +127,7 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 			}
 			else if (ChoixOption.equals("Medicament par Famille"))
 			{
-				//ouvrirFenetre(new JIFMedicamentFam(this));
+				ouvrirFenetre(new JIFMedicamentFam(this, ""));
 			}
 			
 			else if (ChoixOption.equals("Consultation Visiteur"))
