@@ -57,4 +57,21 @@ public class MedicamentDao {
 		ConnexionMySql.fermerConnexionBd();
 		return dicMedicament;
 	}
+	
+	public static HashMap<String, Medicament> retournerMedicamentParFamille(String codeFam)
+	{
+		HashMap<String, Medicament> dicMedicament = new HashMap<String, Medicament>();
+		ResultSet reqSelect = ConnexionMySql.execReqSelection("select * from MEDICAMENT where FAM_CODE ='"+codeFam+"'");
+		try {
+			while(reqSelect.next())
+			{
+				dicMedicament.put(reqSelect.getString(7), MedicamentDao.rechercher(reqSelect.getString(1)));
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		ConnexionMySql.fermerConnexionBd();
+		return dicMedicament;
+	}
 }

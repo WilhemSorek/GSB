@@ -45,4 +45,21 @@ public class MedicamentService
 		dicMedicament = MedicamentDao.retournerMedicament();
 		return dicMedicament;
 	}
+	
+	public static HashMap<String, Medicament> rechercherListeMedicamentFam(String codeFam)
+	{
+		HashMap<String, Medicament> dicMedic = new HashMap<String, Medicament>();
+		try
+		{
+			if (codeFam == null)
+			{
+				throw new Exception("Code famille non reseigné");
+			}
+			dicMedic = MedicamentDao.retournerMedicamentParFamille(codeFam);
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return dicMedic;
+	}
 }
