@@ -52,9 +52,9 @@ public class MedicamentDao {
 			}
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		ConnexionMySql.fermerConnexionBd();
-	return retournerMedicament();
+		return dicMedicament;
 	}
 }
