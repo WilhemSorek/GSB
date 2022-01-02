@@ -3,6 +3,8 @@
  */
 package gsb.tests.unit;
 
+import java.util.HashMap;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -64,8 +66,23 @@ class MedicamentServiceTest extends TestCase {
 				1.01,"ALO","Antibiotique local (ORL)");
 		assertEquals(0, MedicamentDao.ajouter(unMedicament));
 	}
+	
 	@Test
 	void testAjouterMedicamentEchoueEchec() {
 		assertEquals(0, MedicamentDao.ajouter(unMedicament));
 	}
+	
+	@Test
+	void testretournerMedicament() {
+		HashMap<String, Medicament> dicMed = MedicamentDao.retournerMedicament();
+		assertEquals(dicMed, MedicamentDao.retournerMedicament());
+	}
+	
+	@Test
+	void testRetournerMedicamentParFamille() {
+		String codeMed = "ABP";
+		HashMap<String, Medicament> dicMedFam = MedicamentDao.retournerMedicamentParFamille(codeMed);
+		assertEquals(dicMedFam, MedicamentDao.retournerMedicamentParFamille(codeMed));
+	}
+	
 }

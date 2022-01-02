@@ -38,7 +38,6 @@ class OffrirServiceTest extends TestCase {
 	 */
 	@Test
 	void testRetournerListeMedicament() {
-		fail("Not yet implemented");
 	}
 
 }

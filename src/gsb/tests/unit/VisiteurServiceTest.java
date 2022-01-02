@@ -3,10 +3,15 @@
  */
 package gsb.tests.unit;
 
+import java.util.HashMap;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import gsb.modele.Localite;
+import gsb.modele.Visiteur;
+import gsb.modele.dao.VisiteurDao;
 import junit.framework.TestCase;
 
 /**
@@ -29,16 +34,36 @@ class VisiteurServiceTest extends TestCase {
 	 * Test method for {@link gsb.service.VisiteurService#rechercherVisiteur(java.lang.String)}.
 	 */
 	@Test
-	void testRechercherVisiteur() {
-		fail("Not yet implemented");
+	void testRechercherVisiteurSucces() {
+		Localite uneLocalite = new Localite("46000","Cahors");
+		Visiteur unVisiteur = new Visiteur("a131","Villachane","Louis",
+				"lvillachane","jux7g","Film Marvel",uneLocalite,"2005-12-21 00:00:00",
+				0, "SW","SWISS");
+		assertEquals(unVisiteur, VisiteurDao.rechercher("a131"));
 	}
 
 	/**
 	 * Test method for {@link gsb.service.VisiteurService#ajouterVisiteur(gsb.modele.Visiteur)}.
 	 */
 	@Test
-	void testAjouterVisiteur() {
-		fail("Not yet implemented");
+	void testAjouterVisiteurSucces() {
+		Localite uneLocalite = new Localite("45000","Orleans");
+		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT",
+				"ANT-MAN","Avengers","Film Marvel",uneLocalite,"10 NOVEMBRE",
+				0, "101","Battaillon");
+		assertEquals(1, VisiteurDao.ajouter(unVisiteur));
+	}
+	
+	void testAjouterVisiteurEchec() {
+		assertEquals(0, VisiteurDao.ajouter(unVisiteur));
+	}
+	
+	void testAjouterVisiteurExistant() {
+		Localite uneLocalite = new Localite("46000","Cahors");
+		Visiteur unVisiteur = new Visiteur("a131","Villachane","Louis",
+				"lvillachane","jux7g","Film Marvel",uneLocalite,"2005-12-21 00:00:00",
+				0, "SW","SWISS");
+		assertEquals(0, VisiteurDao.ajouter(unVisiteur));
 	}
 
 	/**
@@ -46,7 +71,8 @@ class VisiteurServiceTest extends TestCase {
 	 */
 	@Test
 	void testRetournerCollectionVisiteur() {
-		fail("Not yet implemented");
+		HashMap<String, Visiteur> dicVisiteur = VisiteurDao.retournerCollectionDesVisiteurs();
+		assertEquals(dicVisiteur, VisiteurDao.retournerCollectionDesVisiteurs());
 	}
 
 }

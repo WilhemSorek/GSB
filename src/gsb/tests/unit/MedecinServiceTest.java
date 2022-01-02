@@ -5,6 +5,9 @@ package gsb.tests.unit;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,6 +55,22 @@ public class MedecinServiceTest {
 		
 		Medecin medecinTrouvée = MedecinDao.rechercher("MED001");
 		assertNull(medecinTrouvée);
+	}
+	
+	@Test
+	public final void testRetournerCollectionDesMedecins() {
+		
+		ArrayList<Medecin> tableauMed = MedecinDao.retournerCollectionDesMedecins();
+		assertEquals(tableauMed, MedecinDao.retournerCollectionDesMedecins());
+		
+	}
+	
+	@Test
+	public final void testRetournerDictionnaireDesMedecins() {
+		
+		HashMap<String,Medecin> dicMed = MedecinDao.retournerDictionnaireDesMedecins();
+		assertEquals(dicMed, MedecinDao.retournerDictionnaireDesMedecins());
+		
 	}
 
 }
