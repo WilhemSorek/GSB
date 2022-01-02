@@ -81,22 +81,10 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		mA2.addActionListener(this);
 		mVisiteurs.add(mA2);
 		
-		mVisites = new JMenu("Visite");
-		JMenuItem mV1 = new JMenuItem("Ajout Visite");
-		mV1.addActionListener(this);
-		mVisites.add(mV1);
-		JMenuItem mV2 = new JMenuItem("Mise à jour Visite");
-		mV2.addActionListener(this);
-		mVisites.add(mV2);
-		JMenuItem mV3 = new JMenuItem("Liste Visite");
-		mV3.addActionListener(this);
-		mVisites.add(mV3);
-		
 
 		mbar.add(mMedecins);
 		mbar.add(mMedicaments);
 		mbar.add(mVisiteurs);
-		mbar.add(mVisites);
 		setJMenuBar(mbar);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -138,20 +126,6 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 			else if (ChoixOption.equals("Ajout Visiteur")) 
 			{
 					ouvrirFenetre(new JIFVisiteurAdd(this));
-			}
-			
-			else if (ChoixOption.equals("Ajout Visite"))
-			{
-				//ouvrirFenetre(new JIFVisiteAdd(this));
-			}
-			
-			else if (ChoixOption.equals("Mise à jour Visite"))
-			{
-				//ouvrirFenetre(new JIFVisiteMaj(this));
-			}
-			else if (ChoixOption.equals("Liste Visite"))
-			{
-				ouvrirFenetre(new JIFVisiteList(this));
 			}
 		}
 

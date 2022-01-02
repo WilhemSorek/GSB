@@ -44,7 +44,7 @@ public class MedecinDao {
 	
 	public static ArrayList<Medecin> retournerCollectionDesMedecins(){
 		ArrayList<Medecin> collectionDesMedecins = new ArrayList<Medecin>();
-		ResultSet reqSelection = ConnexionMySql.execReqSelection("select CODEMED from MEDECIN");
+		ResultSet reqSelection = ConnexionMySql.execReqSelection("select * from MEDECIN");
 		try{
 		while (reqSelection.next()) {
 			String codeMedecin = reqSelection.getString(1);
