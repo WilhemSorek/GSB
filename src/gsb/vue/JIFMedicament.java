@@ -54,8 +54,8 @@ public class JIFMedicament extends JInternalFrame {
         
         JTdepotlegal = new JTextField(20);
         JTdepotlegal.setMaximumSize(JTdepotlegal.getPreferredSize());
-        JTnomCommercial = new JTextField();
-        JTcomposition = new JTextField();
+        JTnomCommercial = new JTextField(20);
+        JTcomposition = new JTextField(20);
         JTeffets = new JTextField();    
         JTcontreIndication = new JTextField();
         JTprixEchantillon = new JTextField();

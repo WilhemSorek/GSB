@@ -3,10 +3,22 @@
  */
 package gsb.tests.unit;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import gsb.modele.Visite;
+import gsb.modele.Localite;
+import gsb.modele.Medecin;
+import gsb.modele.Visiteur;
+import gsb.modele.dao.MedecinDao;
+import gsb.modele.dao.VisiteDao;
+import gsb.modele.dao.VisiteurDao;
 import junit.framework.TestCase;
 
 /**
@@ -30,12 +42,19 @@ class VisiteServiceTest extends TestCase {
 	 */
 	@Test
 	void testRechercherVisiteSucces() {
-		fail("Not yet implemented");
+		Localite uneLocaliteMed = new Localite("45000","Orleans");
+		Localite uneLocaliteVis = new Localite("45000","Orleans");
+		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE",0,"101","Battaillon") ;
+		Medecin unMedecin = new Medecin("MEC001","RAOUL","Medecin","24 rue du bled",uneLocaliteMed,"0617222222","100%","pied") ;
+		Visite uneVisite = new Visite("v0024", "2002-03-21","Nice",unMedecin, unVisiteur);
+		Visite visiteTrouvée = VisiteDao.rechercher("v0024");
+		assertEquals ( uneVisite , visiteTrouvée);
 	}
 	
 	@Test
 	void testRechercherVisiteNonExistant() {
-		fail("Not yet implemented");
+		Visite visiteTrouvée = VisiteDao.rechercher("v000021");
+		assertNull(visiteTrouvée);
 	}
 
 	/**
@@ -43,12 +62,22 @@ class VisiteServiceTest extends TestCase {
 	 */
 	@Test
 	void testAjouterVisiteSucces() {
-		fail("Not yet implemented");
+		Localite uneLocaliteMed = new Localite("45000","Orleans");
+		Medecin unMedecin = new Medecin("MEC001","RAOUL","Medecin","24 rue du bled",uneLocaliteMed,"0617222222","100%","pied");
+		Localite uneLocaliteVis = new Localite("45000","Orleans");
+		Visiteur unVisiteur = new Visiteur("VISITEUR01","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE",0,"101","Battaillon");
+		Visite uneVisite = new Visite("REF45","3 Mars","Commenter avec un point",unMedecin,unVisiteur);
+		assertEquals(1, VisiteDao.ajouter(uneVisite));
 	}
 	
 	@Test
 	void testAjouterVisiteEchec() {
-		fail("Not yet implemented");
+		Localite uneLocaliteMed = new Localite("45000","Orleans");
+		Medecin unMedecin = new Medecin("MEC001","RAOUL","Medecin","24 rue du bled",uneLocaliteMed,"0617222222","100%","pied");
+		Localite uneLocaliteVis = new Localite("45000","Orleans");
+		Visiteur unVisiteur = new Visiteur("visiteur","MAN","ANT","ANT-MAN","Avengers","Film Marvel",uneLocaliteVis,"10 NOVEMBRE",0,"101","Battaillon");
+		Visite uneVisite = new Visite("Ref2999°","3 Mars","Commenter avec un point",unMedecin,unVisiteur);
+		assertEquals(0, VisiteDao.ajouter(uneVisite));
 	}
 
 	/**
@@ -69,7 +98,8 @@ class VisiteServiceTest extends TestCase {
 	 */
 	@Test
 	void testRetournerCollectionVisites() {
-		fail("Not yet implemented");
+		HashMap<String, Visite>  tableauVis = VisiteDao.retournerCollectionVisites();
+		assertEquals(tableauVis, VisiteDao.retournerCollectionVisites());
 	}
 
 }

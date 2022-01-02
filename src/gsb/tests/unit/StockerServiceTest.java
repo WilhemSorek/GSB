@@ -3,10 +3,17 @@
  */
 package gsb.tests.unit;
 
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import gsb.modele.Medicament;
+import gsb.modele.Visite;
+import gsb.modele.Visiteur;
+import gsb.modele.dao.OffrirDao;
+import gsb.modele.dao.StockerDao;
 import junit.framework.TestCase;
 
 /**
@@ -30,7 +37,8 @@ public class StockerServiceTest extends TestCase {
 	 */
 	@Test
 	public void testRetournerListeStock() {
-		
+		ArrayList<Medicament>  listeStock = StockerDao.retournerListeStock("e49");
+		assertEquals(listeStock, StockerDao.retournerListeStock("e49"));
 	}
 
 	/**
@@ -38,7 +46,8 @@ public class StockerServiceTest extends TestCase {
 	 */
 	@Test
 	public void testRetournerListeVisiteur() {
-		
+		ArrayList<Visiteur>  listeVisiteur = StockerDao.retournerListeVisiteur("APATOUX22");
+		assertEquals(listeVisiteur, StockerDao.retournerListeVisiteur("APATOUX22"));
 	}
 
 }

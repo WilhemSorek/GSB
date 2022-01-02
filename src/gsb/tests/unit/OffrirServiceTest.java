@@ -3,10 +3,18 @@
  */
 package gsb.tests.unit;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import gsb.modele.Medecin;
+import gsb.modele.Medicament;
+import gsb.modele.Visite;
+import gsb.modele.dao.OffrirDao;
+import gsb.modele.dao.VisiteDao;
 import junit.framework.TestCase;
 
 /**
@@ -30,7 +38,8 @@ class OffrirServiceTest extends TestCase {
 	 */
 	@Test
 	void testRetournerListeOffre() {
-		
+		ArrayList<Visite>  listeOffre = OffrirDao.retournerListeOffre("APATOUX22");
+		assertEquals(listeOffre, OffrirDao.retournerListeOffre("APATOUX22"));
 	}
 
 	/**
@@ -38,6 +47,8 @@ class OffrirServiceTest extends TestCase {
 	 */
 	@Test
 	void testRetournerListeMedicament() {
+		ArrayList<Medicament>  listeMedic = OffrirDao.retournerListeMedicament("v0012");
+		assertEquals(listeMedic, OffrirDao.retournerListeMedicament("v0012"));
 	}
 
 }
